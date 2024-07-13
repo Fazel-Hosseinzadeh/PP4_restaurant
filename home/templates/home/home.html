@@ -2,6 +2,27 @@
 {% load static %}
 
 {% block content %}
-<h3>Here is the home page</h3>
+
+<!-- carousel -->
+<div class="col-md-10 mx-auto col">
+    <div class="row">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/slide_1.jpg' %}" class="d-block w-100 rounded-4"
+                        alt="A restaurant Table setting">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slide_2.jpg' %}" class="d-block w-100 rounded-4"
+                        alt="A picture of two dishes of food">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/slide_3.jpg' %}" class="d-block w-100 rounded-4"
+                        alt="A photo of ambience of restaurant ">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
