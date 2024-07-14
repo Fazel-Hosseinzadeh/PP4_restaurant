@@ -25,4 +25,52 @@
     </div>
 </div>
 
-{% endblock %}
+<div class="container-fluid">
+    <div class="row text-center mt-5">
+        <h1>Welcome to Black Forest Restaurant</h1>
+        <p class="lead h5">
+            <em>Savor exquisite dishes and impeccable service at Black Forest,
+             where every bite is a celebration.
+            </em>
+        </p>
+    </div>
+</div>
+
+<!--Cards-->
+<div class="container-fluid">
+    <div class="row d-flex my-5 justify-content-center text-center">
+
+        <a href="#" class="btn btn-outline-secondary card mb-3 col-10 col-md-4 col-lg-3 ">
+            <img class="card-img-top rounded-circle" src="{% static 'images/card_menus.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">Menus</h2>
+                <hr>
+                <p class="card-text h4 lead">Our Foods and Drinks</p>
+            </div>
+        </a>
+
+        <a href="#" class="btn btn-outline-secondary card mb-3 col-10 col-md-4 col-lg-3">
+            <img class="card-img-top rounded-circle" src="{% static 'images/card_book.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">Make a Reservation</h2>
+                <hr>
+                <p class="card-text h4 lead">Reserve Your Table & Enjoy Black Forest</p>
+            </div>
+        </a>
+
+        <a href="#" class="btn btn-secondary card mb-3 col-10 col-md-4 col-lg-3">
+            <img class="card-img-top rounded-circle" src="{% static 'images/card_blog.jpg' %}" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">Blog</h2>
+                <hr>
+                <p class="card-text h4 lead">Explore Our Blog</p>
+            </div>
+        </a>
+
+    </div>
+
+
+</div>
+
+
+  {% endblock %}
