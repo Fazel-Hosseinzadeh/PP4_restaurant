@@ -27,22 +27,25 @@
             {% endif %}
         </div>
 
-        <!-- comment counter -->
-        <div class="row">
-            <div class="col-12">
-                <strong class="text-secondary">
-                    <i class="far fa-comments"></i> {{ comment_count }}
-                </strong>
-            </div>
-            <div class="col-12">
-                <hr>
-            </div>
-        </div>
+
 
         <div class="row">
             <!--Show comments, edit and delete buttons-->
             <div class="col-md-6 mb-4 mt-3 border border-secondary">
-                <h3 class="my-5 ">Comments:</h3>
+                <!-- comment counter -->
+                <div class="row">
+                    <div class="col-12">
+                        <strong class="text-secondary">
+                            <i class="far fa-comments"></i> {{ comment_count }}
+                        </strong>
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+
+                <h3 class="my-5 ">Comments:
+                </h3>
                 
                 <!-- Iterating in comments -->
 
