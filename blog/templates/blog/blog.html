@@ -30,6 +30,19 @@
 
         {% endfor %}
 
+
+        <!--Pagination buttons-->
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+                {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-secondary col-8 col-md-2">&laquo; PREV </a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-secondary col-8 col-md-2"> NEXT &raquo;</a>
+                {% endif %}
+        </nav>
+        {% endif %}
+
     </div>
 </div>
 
