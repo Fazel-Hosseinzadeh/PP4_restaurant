@@ -5,6 +5,7 @@ from home.views import home
 
 urlpatterns = [
     path("", include("home.urls"), name = 'home-urls'),
+    path("", include("menus.urls"), name = 'menus-urls'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
 ]
