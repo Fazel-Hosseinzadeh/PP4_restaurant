@@ -41,34 +41,39 @@
 
         <div class="row">
             <!--Show comments, edit and delete buttons-->
-            <div class="col-md-8 card mb-4 mt-3 ">
-                <h3 class="my-5">Comments:</h3>
-                <hr>
-                <div class="card-body">
-                    <!-- Iterating in comments -->
-                    {% for comment in comments %}
-                    <div
-                        class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                        <p class="text-muted">
+            <div class="col-md-6 mb-4 mt-3 border border-secondary">
+                <h3 class="my-5 ">Comments:</h3>
+                
+                <!-- Iterating in comments -->
+
+                {% for comment in comments %}
+                <div class="card border-secondary mb-3 p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="card-header text-muted my-2">
+                        {{ comment.created_on }}
+                    </p>
+                    <div class="card-body">
+                        <p class="card-title text-muted">
                             {{ comment.author }}
-                            <span class="text-muted">
-                                {{ comment.created_on }}
-                            </span> wrote:
+                            wrote:
                         </p>
-                        <div id="comment{{ comment.id }}">
+                        <div class="card-text" id="comment{{ comment.id }}">
                             {{ comment.body | linebreaks }}
+
+
+                            <!--show edit and delete buttons-->
+                            {% if not comment.approved and comment.author == user %}
+                            <p class="approval">This comment is awaiting approval</p>
+                            {% endif %}
+                            {% if user.is_authenticated and comment.author == user %}
+                            <button class="btn  btn-danger btn-delete col-4 col-lg-3" data-comment_id="{{ comment.id }}">Delete</button>
+                            <button class="btn btn-success btn-edit col-4 col-lg-3" data-comment_id="{{ comment.id }}">Edit</button>
+                            {% endif %}
                         </div>
-                        {% if not comment.approved and comment.author == user %}
-                        <p class="approval">This comment is awaiting approval</p>
-                        {% endif %}
-                        {% if user.is_authenticated and comment.author == user %}
-                        <button class="btn  btn-danger btn-delete col-2" data-comment_id="{{ comment.id }}">Delete</button>
-                        <button class="btn btn-success btn-edit col-2" data-comment_id="{{ comment.id }}">Edit</button>
-                        {% endif %}
-                    </div>
-                    <hr>
-                    {% endfor %}
+                    </div> 
+
                 </div>
+                {% endfor %}
+                
             </div>
 
         </div>
