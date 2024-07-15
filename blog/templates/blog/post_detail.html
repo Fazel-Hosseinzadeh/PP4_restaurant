@@ -3,5 +3,35 @@
 
 
 {% block content %}
-this is blog detail
+
+<div class="container-fluid my-5">
+    <div class="row justify-content-center text-center">
+
+        <!-- Post content -->
+        <div class="col-md-6 col-lg-5 border border-3 border-secondary rounded-5 p-4">
+            <h1 class="text-center">{{ post.title }}</h1>
+            <hr >
+            <p class="lead my-5">{{ post.content| safe }}</p>
+
+            <hr>
+            <p class="card-text h6 mt-5">By: {{ post.author}}</p>
+            <p class="card-text text-muted ">{{ post.created_on}}</p>
+        </div>
+
+        <!-- Post image -->
+        <div class="col-md-4 col-lg-7 ">
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="{% static 'images/default.jpg' %}" class="col-11 rounded-3" alt="placeholder">
+            {% else %}
+            <img src="{{ post.featured_image.url }}" class="col-11 rounded-3" alt="{{ post.title }}">
+            {% endif %}
+        </div>
+
+
+
+        
+    </div>
+</div>
+
+
 {% endblock %}
