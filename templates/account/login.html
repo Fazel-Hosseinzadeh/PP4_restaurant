@@ -24,7 +24,10 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-outline-light btn-signup right" type="submit">{% trans "Sign In" %}</button>
+                <button class="btn btn-outline-light btn-signup right my-4" type="submit">{% trans "Sign In" %}</button>
+
+                <div class="justify-content-center text-center mx-auto"><hr></div>
+
                 <p class="mt-5">{% blocktrans %}
                 If you have not created an account yet, then <a class="btn btn-outline-secondary right" href="{{ signup_url }}">sign up</a> first.
                 {% endblocktrans %}</p>
