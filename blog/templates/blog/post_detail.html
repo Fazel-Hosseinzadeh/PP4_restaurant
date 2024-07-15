@@ -81,19 +81,21 @@
             </div>
 
             <!--Show comment form-->
-            <div class="col-md-4 card mb-4 mt-3 ">
-                <div class="card-body">
-                    {% if user.is_authenticated %}
-                    <h4>Let us know your idea:</h4>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button id="submitButton" type="submit" class="btn btn-outline-light col-3">Submit</button>
-                    </form>
+            <div class="col-md-6 mb-4 mt-3">
+                <div class="card border border-secondary">
+                    <h4 class="card-header">Let us know about idea:</h4>
+                    <div class="card-body">
+                        {% if user.is_authenticated %}
+                        <p class="card-text">Posting as: {{ user.username }}</p>
+                        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button id="submitButton" type="submit" class="btn btn-outline-light col-3">Submit</button>
+                        </form>
+                    </div>
                     {% else %}
                     <p>Log in to leave a comment</p>
-                    <a href="{% url "log_in" %}" class="btn btn-outline-secondary"></a>
+                    <a href="{% url "account_login" %}" class="col-3 btn btn-outline-light">Log in</a>
                     {% endif %}
                 </div>
             </div>
