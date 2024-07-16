@@ -121,6 +121,10 @@ DATABASES = {
     
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    "https://*.herokuapp.com"
+]
 
 
 # Password validation
