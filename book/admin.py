@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Table, Booking
 
-# Register your models here.
+# Register Table model
+@admin.register(Table)
+class TableAdmin(admin.ModelAdmin):
+    list_display = ('table_id', 'table_name', 'max_seats')
