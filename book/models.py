@@ -69,7 +69,7 @@ class Booking(models.Model):
         (5, "5 Guests"),
         (6, "6 Guests"),
         )
-    guest_count = models.IntegerField(choices=seats, default=4)
+    guest_count = models.PositiveIntegerField(choices=seats, default=4)
     created_date = models.DateTimeField(auto_now_add=True)
     requested_date = models.DateField()
     requested_time = models.CharField(
