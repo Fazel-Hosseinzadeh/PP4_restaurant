@@ -60,8 +60,10 @@
                             {{ comment.author }}
                             wrote:
                         </p>
-                        <div class="card-text" id="comment{{ comment.id }}">
-                            {{ comment.body | linebreaks }}
+                        <div class="card-text">
+                            <div id="comment{{ comment.id }}">
+                                {{ comment.body | linebreaks }}
+                            </div>
 
 
                             <!--show edit and delete buttons-->
