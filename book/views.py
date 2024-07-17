@@ -19,7 +19,7 @@ def book(request):
             booking.name = request.POST.get('name')
             booking.email = request.POST.get('email')
             booking.phone = request.POST.get('phone')
-            booking.status = 'awaiting confirmation'
+            booking.status = 'Awaiting confirmation'
             booking.guest_count = request.POST.get('guest_count')
             booking.requested_date = request.POST.get('requested_date')
             booking.requested_time  = request.POST.get('requested_time')
