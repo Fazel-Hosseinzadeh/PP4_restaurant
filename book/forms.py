@@ -7,7 +7,6 @@ from phonenumber_field.formfields import PhoneNumberField
     
 class BookingForm(forms.ModelForm):
     
-    phone = PhoneNumberField()
     class Meta:
         model = Booking
         fields = (
@@ -35,7 +34,7 @@ class BookingForm(forms.ModelForm):
             
             'name': forms.TextInput(attrs={'class' : 'form-control'}),
             'email': forms.EmailInput(attrs={'class' : 'form-control'}),
-            'phone' : forms.TextInput(attrs={'placeholder': '+353123456789'}),
+            'phone' : forms.NumberInput(attrs={'placeholder': '+353123456789', 'type' : 'tel'}),
             'guest_count': forms.Select(attrs={'class' : 'form-control'}),
             'table' : forms.Select(attrs={'class' : 'form-control'}),
             'requested_date' : forms.widgets.DateInput(attrs={'class': 'datepicker', 'type': 'date', 'min ': datetime.today().date() , ' max': '2050-01-01'}),
