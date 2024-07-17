@@ -10,7 +10,6 @@ def book(request):
     tables= Table.objects.all()
     bookings = Booking.objects.all()
     
-    
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
@@ -27,16 +26,20 @@ def book(request):
             messages.add_message(
                 request, messages.SUCCESS,
                 'Booking submitted successfully and awaiting approval'
-            )
+            )        
         else:
-            messages.add_message(
-                request, messages.ERROR,
-                'Booking error, your email or phone is incorrect.'
-            )
-            
-                
-            
-    booking_form = BookingForm()
+            # Giving feedback of the reason of failure
+            if not booking_form.is_valid():
+                for error in booking_form.errors:
+                    if error == '__all__':
+                        continue
+                    messages.add_message(
+                        request, messages.ERROR,
+                        f'Error in {error} field. Booking unsuccessful'
+                    )
+                    print(error)
+                    
+    booking_form = BookingForm()  
     
     return render (
         request,
