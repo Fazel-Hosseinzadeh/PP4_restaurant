@@ -11,30 +11,29 @@ class TableAdmin(admin.ModelAdmin):
 # Register Book model
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_filter = (
-        'user',
-        'name',
-        'email',
-        'phone',
-        'guest_count',
-        'status',
-        'requested_date',
-        'requested_time',
-        'created_date'
-        )
     list_display = (
         'user',
         'name',
         'phone',
+        'email',
         'guest_count',
         'status',
         'table',
         'requested_date',
         'requested_time',
-        'created_date')
+        )
 
-    search_fields = ['guest__name']
-    list_filter = (('requested_date', DateRangeFilter),)
+    search_fields = [
+                    'name',
+                    'email',
+                    'phone',
+                     
+                     ]
+    list_filter = (('requested_date', DateRangeFilter),
+                    'guest_count',
+                    'status',
+                    'requested_time',
+                   )
     actions = ['confirm_bookings']
 
     # Add actions to do on the bookings
