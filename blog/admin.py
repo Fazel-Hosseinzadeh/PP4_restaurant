@@ -13,4 +13,20 @@ class PostAdmin(SummernoteModelAdmin):
 
 
 # Register Comment model
-admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(SummernoteModelAdmin):
+    list_filter = (
+    'author',
+    'approved'
+    )
+    list_display = (
+    'author',
+    'approved',
+    'created_on',
+    'body'
+    )
+    actions = ['confirm_comments']
+    
+    # Add actions to do on the bookings
+    def confirm_comments(self, request, queryset):
+        queryset.update(status='Published')
