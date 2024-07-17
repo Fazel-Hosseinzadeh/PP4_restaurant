@@ -25,8 +25,11 @@ class CommentAdmin(SummernoteModelAdmin):
     'created_on',
     'body'
     )
-    actions = ['confirm_comments']
+    actions = ['confirm_comments', 'unconfirmed_commet']
     
     # Add actions to do on the bookings
     def confirm_comments(self, request, queryset):
-        queryset.update(status='Published')
+        queryset.update(approved= True)
+    
+    def unconfirmed_commet(self, request, queryset):
+        queryset.update(approved= False)
