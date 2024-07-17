@@ -16,7 +16,7 @@ class Table(models.Model):
         ordering = ['-max_seats']
 
     def __str__(self):
-        return f"Table  {self.table_name} | Max seats {self.max_seats}"
+        return f"{self.table_name} | Max seats {self.max_seats}"
     
 
 # Restaurants time slots 
