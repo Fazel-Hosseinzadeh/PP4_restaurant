@@ -103,12 +103,25 @@
                             Name: {{booking.name}} <br>
                             Email: {{booking.email}} <br>
                             Phone: {{booking.phone}} <br>
-                                Number of Guests : {{booking.guest_count}} <br>
-                                Table : {{booking.table}} <br>
-                                Booking Date: {{booking.requested_date}} <br>
-                                Booking Time: {{booking.requested_time}} <br>
-                                Booking created on: {{booking.created_date}} <br>
-                                <hr>
+                            Number of Guests : {{booking.guest_count}} <br>
+                            Table : {{booking.table}} <br>
+                            Booking Date: {{booking.requested_date}} <br>
+                            Booking Time: {{booking.requested_time}} <br>
+                            Booking created on: {{booking.created_date}} <br>
+                            Booking status:<span class="badge 
+                            {% if booking.status == 'Awaiting confirmation' %}
+                            text-bg-secondary
+                            {% elif booking.status == 'Booking Confirmed'%}
+                            text-bg-success
+                            {% elif booking.status == 'Booking Rejected'%}
+                            text-bg-danger
+                            {% elif booking.status == 'Booking Expired'%}
+                            text-bg-warning
+                            {% endif %}
+                            ">
+                            {{booking.status}} 
+                            </span><br>
+                            <hr>
                             </p>
                             {% endif %}
                             {% endfor %}
