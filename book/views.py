@@ -53,6 +53,7 @@ def book(request):
 # Edit booking function
 def edit(request , id):
     if request.method == "POST":
+
         booking = Booking.objects.get(pk=id)
         form = BookingForm(request.POST , instance = booking)
         if form.is_valid():
@@ -80,3 +81,9 @@ def edit(request , id):
                         }
                         )
         
+#Delete booking function
+def delete(request , id):
+    if request.method == 'POST':
+        booking = Booking.objects.get(pk=id)
+        booking.delete()
+    return HttpResponseRedirect(reverse('book'))
