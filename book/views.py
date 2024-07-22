@@ -4,12 +4,12 @@ from .models import Table, Booking
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import BookingForm
+from datetime import datetime, timedelta
 
 # Booking function
 def book(request):
     tables= Table.objects.all()
     bookings = Booking.objects.all()
-    
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
@@ -20,14 +20,38 @@ def book(request):
             booking.phone = request.POST.get('phone')
             booking.status = 'Awaiting confirmation'
             booking.guest_count = request.POST.get('guest_count')
+            booking.table_reserved = request.POST.get('table')
             booking.requested_date = request.POST.get('requested_date')
             booking.requested_time  = request.POST.get('requested_time')
-            booking.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Booking submitted successfully and awaiting approval'
-            )        
+            
+            other_bookings_book = False #for checking if others booked already
+            if bookings:
+                for other_booking in bookings:
+                    if other_booking.table == booking.table and (
+                        (other_booking.requested_date == booking.requested_date and
+                        other_booking.requested_time >= booking.requested_time and
+                        other_booking.requested_time < (booking.requested_time + timedelta(hours=2)))):
+                        other_bookings_book = True
+                        
+            if not other_bookings_book:
+                booking.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'Booking submitted successfully and awaiting approval'
+                )
+                #update bookings list with new booking 
+                bookings = Booking.objects.all()
+                
+            else:
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    'This table is alredy booked '
+                )
+                
+                        
+                       
         else:
+            
             # Giving feedback of the reason of failure
             if not booking_form.is_valid():
                 for error in booking_form.errors:
@@ -37,7 +61,7 @@ def book(request):
                         request, messages.ERROR,
                         f'Error in {error} field. Booking unsuccessful'
                     )
-                    print(error)
+                    
                     
     booking_form = BookingForm()  
     
