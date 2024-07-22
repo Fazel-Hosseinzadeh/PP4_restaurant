@@ -3,6 +3,7 @@ from .models import Booking
 from datetime import datetime
 from django.forms.widgets import DateInput
 from phonenumber_field.formfields import PhoneNumberField
+from datetime import datetime, timedelta
 
     
 class BookingForm(forms.ModelForm):
@@ -37,7 +38,7 @@ class BookingForm(forms.ModelForm):
             'phone' : forms.NumberInput(attrs={'placeholder': '+353123456789', 'type' : 'tel'}),
             'guest_count': forms.Select(attrs={'class' : 'form-control'}),
             'table' : forms.Select(attrs={'class' : 'form-control'}),
-            'requested_date' : forms.widgets.DateInput(attrs={'class': 'datepicker', 'type': 'date', 'min ': datetime.today().date() , ' max': '2050-01-01'}),
+            'requested_date' : forms.widgets.DateInput(attrs={'class': 'datepicker', 'type': 'date', 'min ': datetime.today().date()+ timedelta(days=1) , ' max': '2050-01-01'}),
             'requested_time' : forms.Select(attrs={'class' : 'form-control'}),
             }
         
