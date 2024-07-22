@@ -53,7 +53,6 @@ def book(request):
 # Edit booking function
 def edit(request , id):
     if request.method == "POST":
-        bookings=Booking.objects.all()
         booking = Booking.objects.get(pk=id)
         form = BookingForm(request.POST , instance = booking)
         if form.is_valid():
@@ -63,12 +62,14 @@ def edit(request , id):
                 request, messages.SUCCESS,
                 'Booking updated successfully and awaiting approval'
                 )
+            return HttpResponseRedirect (reverse('book'),
+                        {
+                            'form': form,
+                            'booking': booking,
+                        }
+                        )
                         
-            return render(request, "book/edit.html",
-                          {
-                          'form': form,
-                          'booking': booking,
-                          })
+           
     else:
         booking = Booking.objects.get(pk=id)
         form = BookingForm(instance = booking)
