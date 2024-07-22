@@ -124,10 +124,57 @@
                             
                             <!--show edit and delete buttons-->
                             <div class="mt-5 justify-content-center text-center">
-                                <a class="btn  btn-danger btn-delete col-4 col-lg-3"  href= "#" >Delete</a>
+                                <button class="btn  btn-danger btn-delete col-4 col-lg-3" data-bs-toggle="modal" data-bs-target="#delete{{booking.id}}" >Delete</button>
                                 <a class="btn btn-success btn-edit col-4 col-lg-3"  href= "{% url 'edit' booking.id %}">Edit</a>
                             </div>
                             <hr>
+
+                            <!-- Modal - Delete Student -->
+                            <div
+                            class="modal"
+                            id="delete{{ booking.id }}"
+                            tabindex="-1"
+                            aria-labelledby="bookingmodal"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">
+                                    Booking: {{ booking.name }} <br>
+                                    </h5>
+                                    <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete this booking:<strong>
+                                        <br>
+                                        Booking: {{ booking.name }} <br>
+                                        Number of Guests : {{booking.guest_count}} <br>
+                                        Table :{{booking.table}}<br>
+                                        Booking Date: {{booking.requested_date}}<br>
+                                    </strong></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <form action="{% url 'delete' booking.id %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-danger " value="delete" style="color: aliceblue;">
+                                    </form>
+                                    <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-dismiss="modal">
+                                    Close
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
                             </p>
                             {% endif %}
                             {% endfor %}
