@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import BookingForm
 
-# Create your views here.
+# Booking function
 def book(request):
     tables= Table.objects.all()
     bookings = Booking.objects.all()
@@ -49,3 +49,33 @@ def book(request):
             'bookings' : bookings,
          }
                    )
+    
+# Edit booking function
+def edit(request , id):
+    if request.method == "POST":
+        bookings=Booking.objects.all()
+        booking = Booking.objects.get(pk=id)
+        form = BookingForm(request.POST , instance = booking)
+        if form.is_valid():
+            booking.status ='Awaiting confirmation'
+            form.save() 
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Booking updated successfully and awaiting approval'
+                )
+                        
+            return render(request, "book/edit.html",
+                          {
+                          'form': form,
+                          'booking': booking,
+                          })
+    else:
+        booking = Booking.objects.get(pk=id)
+        form = BookingForm(instance = booking)
+        return render (request, 'book/edit.html',
+                        {
+                            'form': form,
+                            'booking': booking
+                        }
+                        )
+        
