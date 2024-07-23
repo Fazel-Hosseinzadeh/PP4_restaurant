@@ -5,14 +5,44 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
 
-# Post List view
+
 class PostList(generic.ListView):
+    """
+    Display a list of published blog posts.
+
+    **Context**
+
+    ``post_list``
+        A list of instances of :model:`blog.Post` that are published.
+
+    **Template:**
+
+    :template:`blog/blog.html`
+    """
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
     paginate_by = 3
     
-# Post detail
+    
 def post_detail(request, slug):
+    """
+    Display the details of a single blog post and its comments.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+    ``comments``
+        A list of comments related to the post.
+    ``comment_count``
+        The count of approved comments related to the post.
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`
+
+    **Template:**
+
+    :template:`blog/post_detail.html`
+    """
     
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -44,8 +74,19 @@ def post_detail(request, slug):
     )
     
     
-# Edit Comments
 def comment_edit(request, slug, comment_id):
+    """
+    Edit an individual comment.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+    ``comment``
+        A single comment related to the post.
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`
+    """
     if request.method == "POST":
 
         queryset = Post.objects.filter(status=1)
@@ -66,9 +107,17 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-# Delete Comments
 def comment_delete(request, slug, comment_id):
+    """
+    Delete an individual comment.
 
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+    ``comment``
+        A single comment related to the post.
+    """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
