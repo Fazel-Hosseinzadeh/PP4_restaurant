@@ -5,6 +5,8 @@ from cloudinary.models import CloudinaryField
 
 # Choices for the status of a post
 STATUS = ((0, "Draft"), (1, "Published"))
+
+
 class Post(models.Model):
     """
      Stores a single blog post entry related to :model:`auth.User`.
@@ -26,7 +28,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField("image", default="placeholder")
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -38,8 +40,8 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-    
-    
+
+
 class Comment(models.Model):
     """
     Stores a single comment entry related to :model:`auth.User` and :model:`Post`.
@@ -51,10 +53,9 @@ class Comment(models.Model):
         created_on (DateTimeField): The date and time when the comment was created.
         approved (BooleanField): Whether the comment is approved for display.
     """
-    post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                             related_name="comments")
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter")
+
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)

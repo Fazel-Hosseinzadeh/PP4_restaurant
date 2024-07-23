@@ -19,11 +19,12 @@ class PostList(generic.ListView):
 
     :template:`blog/blog.html`
     """
+
     queryset = Post.objects.filter(status=1)
     template_name = "blog/blog.html"
     paginate_by = 3
-    
-    
+
+
 def post_detail(request, slug):
     """
     Display the details of a single blog post and its comments.
@@ -43,7 +44,7 @@ def post_detail(request, slug):
 
     :template:`blog/post_detail.html`
     """
-    
+
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
@@ -56,10 +57,9 @@ def post_detail(request, slug):
             comment.post = post
             comment.save()
             messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
+                request, messages.SUCCESS, "Comment submitted and awaiting approval"
             )
-    
+
     comment_form = CommentForm()
 
     return render(
@@ -69,11 +69,11 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "comment_form": comment_form,
         },
     )
-    
-    
+
+
 def comment_edit(request, slug, comment_id):
     """
     Edit an individual comment.
@@ -99,12 +99,13 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment has been Updated!')
+            messages.add_message(request, messages.SUCCESS, "Comment has been Updated!")
         else:
-            messages.add_message(request, messages.ERROR,
-                                 'Error during updating comment!')
+            messages.add_message(
+                request, messages.ERROR, "Error during updating comment!"
+            )
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse("post_detail", args=[slug]))
 
 
 def comment_delete(request, slug, comment_id):
@@ -124,9 +125,10 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment has been deleted!')
+        messages.add_message(request, messages.SUCCESS, "Comment has been deleted!")
     else:
-        messages.add_message(request, messages.ERROR,
-                             'You are not allowed to delete this comments!')
+        messages.add_message(
+            request, messages.ERROR, "You are not allowed to delete this comments!"
+        )
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse("post_detail", args=[slug]))

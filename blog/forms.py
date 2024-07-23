@@ -13,6 +13,7 @@ class CommentForm(forms.ModelForm):
         model (Comment): The model associated with this form.
         fields (tuple): The fields to include in the form.
     """
+
     class Meta:
         model = Comment
-        fields = ('body',)
+        fields = ("body",)
