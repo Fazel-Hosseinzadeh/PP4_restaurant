@@ -28,7 +28,8 @@ tabindex="0"
               
                       <!--Form buttons-->
                       <div class="text-end my-5">
-                          <button class="btn btn-outline-light col-5" type="submit" action="{% url 'book' %}">Update</button>
+                        <a href="{% url "book" %}" class="btn btn-secondary col-5">Cancel</a>
+                        <button class="btn btn-outline-light col-5" type="submit" action="{% url 'book' %}">Update</button>
                       </div>
                       {% else %}
                       
