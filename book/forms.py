@@ -7,6 +7,24 @@ from datetime import datetime, timedelta
 
     
 class BookingForm(forms.ModelForm):
+    """
+    Form class for users to request a booking.
+
+    **Meta Attributes:**
+        model (Booking): The model associated with this form.
+        fields (tuple): The fields to include in the form.
+        labels (dict): Custom labels for the form fields.
+        widgets (dict): Custom widgets for the form fields.
+
+    **Fields:**
+        name (str): The name of the person making the booking.
+        phone (PhoneNumberField): The phone number of the person making the booking.
+        email (str): The email of the person making the booking.
+        guest_count (int): The number of guests for the booking.
+        table (Table): The table being booked.
+        requested_date (date): The date requested for the booking.
+        requested_time (time): The time requested for the booking.
+    """
     
     class Meta:
         model = Booking
