@@ -16,7 +16,7 @@ def home(request):
 
     :template:`home/home.html`
     """
-    return render (
+    return render(
         request,
         "home/home.html",
-                   )
+    )
