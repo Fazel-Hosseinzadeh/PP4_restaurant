@@ -20,7 +20,8 @@ class ContactForm(forms.ModelForm):
     **Model**
     :model:`app.ContactMessage`
     """
+
     class Meta:
 
         model = ContactMessage
-        fields = ('name', 'email', 'message')
+        fields = ("name", "email", "message")

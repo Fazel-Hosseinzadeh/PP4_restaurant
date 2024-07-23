@@ -19,8 +19,7 @@ class ContactContentAdmin(SummernoteModelAdmin):
     None
     """
 
-    summernote_fields = ('content',)
-
+    summernote_fields = ("content",)
 
 
 @admin.register(ContactMessage)
@@ -46,22 +45,19 @@ class ContactMessageAdmin(admin.ModelAdmin):
     **Template**
     None
     """
-    
+
     list_display = (
-        'name',
-        'email',
-        'read',
-        )
+        "name",
+        "email",
+        "read",
+    )
 
     search_fields = [
-                    'name',
-                    'email',
-                     ]
-    list_filter = (
-                    'read',
-                   )
-    actions = ['read']
-
+        "name",
+        "email",
+    ]
+    list_filter = ("read",)
+    actions = ["read"]
 
     def read(self, request, queryset):
         """
@@ -70,4 +66,3 @@ class ContactMessageAdmin(admin.ModelAdmin):
         Updates the `read` field to `True` for the selected `ContactMessage` instances.
         """
         queryset.update(read=True)
-    
