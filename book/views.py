@@ -6,8 +6,23 @@ from django.http import HttpResponseRedirect
 from .forms import BookingForm
 from datetime import datetime, timedelta
 
-# Booking function
+
 def book(request):
+    """
+    Handles the booking process for tables.
+
+    Allows users to submit a booking request through a form. If the form is valid, a new booking is created
+    with the provided details. Displays feedback messages based on the success or failure of the form submission.
+
+    **Context**
+    ``booking_form``
+        An instance of :form:`book.BookingForm` for submitting a new booking.
+    ``bookings``
+        A queryset of all :model:`book.Booking` instances for display.
+
+    **Template**
+    :template:`book/book.html`
+    """
     tables= Table.objects.all()
     bookings = Booking.objects.all()
     if request.method == "POST":
@@ -48,9 +63,24 @@ def book(request):
         }
     )
 
-    
-# Edit booking function
+
 def edit(request , id):
+    """
+    Allows users to edit an existing booking.
+
+    Handles the display and updating of a booking instance. If the form is valid after submission, the booking's
+    status is set to 'Awaiting confirmation' and the changes are saved. Displays feedback messages based on the
+    success or failure of the form submission.
+
+    **Context**
+    ``form``
+        An instance of :form:`book.BookingForm` pre-filled with the booking's current data for editing.
+    ``booking``
+        The :model:`book.Booking` instance being edited.
+
+    **Template**
+    :template:`book/edit.html`
+    """
     if request.method == "POST":
 
         booking = Booking.objects.get(pk=id)
@@ -79,9 +109,21 @@ def edit(request , id):
                             'booking': booking
                         }
                         )
-        
-#Delete booking function
+    
+    
 def delete(request , id):
+    """
+    Handles the deletion of a booking.
+
+    Deletes the specified booking instance when the request method is POST. After deletion, the user is redirected
+    to the booking list view.
+
+    **Context**
+    None
+
+    **Template**
+    None
+    """
     if request.method == 'POST':
         booking = Booking.objects.get(pk=id)
         booking.delete()
