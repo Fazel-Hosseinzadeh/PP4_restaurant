@@ -2,9 +2,11 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 
-# Table model
-class Table(models.Model):
 
+class Table(models.Model):
+    """
+    Stores a single table entry.
+    """
     table_name = models.CharField(
         max_length=50,
         default='Table',
@@ -44,7 +46,9 @@ status_options = (
 
 # booking model
 class Booking(models.Model):
-    
+    """
+    Stores a single booking entry related to :model:`auth.User` and :model:`Table`.
+    """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="user", null=True)
     name = models.CharField(
