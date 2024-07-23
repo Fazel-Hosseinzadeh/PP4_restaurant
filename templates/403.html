@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row d-flex my-5 justify-content-center">
+        <div class="col-md-10 mx-auto card shadow p-3 mt-5 rounded">
+            <h1 class="mt-5 mb-5 mx-auto">403 Error Page</h1>
+            <h2 class="mx-auto p-3">You don't have permission to access this page</h2>
+            <div class="row mx-auto">
+                <div class="col-md-4">
+                    <a href="{% url 'home' %}" class="btn btn-outline-light">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
