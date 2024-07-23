@@ -4,9 +4,11 @@
 {% url 'menus' as menus_url %}
 {% url 'blog' as blog_url %}
 {% url 'book' as book_url %}
+{% url 'contact' as contact_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +85,11 @@
             <li class="nav-item ">
               <a class="nav-link {% if request.path == book_url %}active" aria-current="page{% endif %}" href="{% url "book" %}">
                 Book
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}" href="{% url "contact" %}">
+                Contact Us
               </a>
             </li>
             {% if user.is_authenticated %}
