@@ -3,10 +3,27 @@ from .models import ContactContent
 from .forms import ContactForm
 from django.contrib import messages
 
-# Contact views
+
 def contact(request):
+    """
+    Handles the contact form submission and displays contact content.
+
+    Retrieves the most recent `ContactContent` and renders a contact form. If the form is submitted
+    via POST, it processes the form data to create a new `ContactMessage` instance. Provides feedback
+    to the user based on the success or failure of the form submission.
+
+    **Context**
+
+    ``contact_form``
+        An instance of :form:`contact.ContactForm` for submitting user messages.
+    ``content``
+        The most recent instance of :model:`contact.ContactContent`.
+
+    **Template:**
+
+    :template:`contact/contact.html`
+    """
     content = ContactContent.objects.all().order_by('-updated_on').first()
-    
     # request POST
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
