@@ -14,5 +14,22 @@
     </div>
 </div>
 
+<!--Contact Form-->
+<hr>
+<div class="container justify-content-center px-3 mt-0">
+    <div class="col-6 offset-3">
+    
+        <form action="{% url 'contact' %}" method = 'POST' class = 'mt-5'>
+            {% csrf_token %}
+            {{contact_form | crispy }}
+
+            <!--Form buttons-->
+            <div class="text-end my-5">
+                <button class="btn btn-outline-light col-3" type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 {% endblock %}
