@@ -9,7 +9,7 @@ class FoodAdmin(SummernoteModelAdmin):
     """
     Admin interface for managing food items.
 
-    Displays fields for food items in the admin list view and provides search and filter options. 
+    Displays fields for food items in the admin list view and provides search and filter options.
     Includes a rich-text editor for the `description` field using Summernote.
 
     **Fields**
@@ -25,18 +25,24 @@ class FoodAdmin(SummernoteModelAdmin):
     **Template**
     None
     """
-    list_display = ('food_name', 'food_type', 'price', 'available',)
-    search_fields = ('food_name', 'description')
-    list_filter = ('available', 'food_type')
-    summernote_fields = ('description',)
-    
+
+    list_display = (
+        "food_name",
+        "food_type",
+        "price",
+        "available",
+    )
+    search_fields = ("food_name", "description")
+    list_filter = ("available", "food_type")
+    summernote_fields = ("description",)
+
 
 @admin.register(DrinkItem)
 class DrinkAdmin(SummernoteModelAdmin):
     """
     Admin interface for managing drink items.
 
-    Displays fields for drink items in the admin list view and provides search and filter options. 
+    Displays fields for drink items in the admin list view and provides search and filter options.
     Includes a rich-text editor for the `description` field using Summernote.
 
     **Fields**
@@ -52,7 +58,13 @@ class DrinkAdmin(SummernoteModelAdmin):
     **Template**
     None
     """
-    list_display = ('drink_name', 'drink_type', 'price', 'available',)
-    search_fields = ('drink_name', 'description')
-    list_filter = ('available', 'drink_type')
-    summernote_fields = ('description',)
+
+    list_display = (
+        "drink_name",
+        "drink_type",
+        "price",
+        "available",
+    )
+    search_fields = ("drink_name", "description")
+    list_filter = ("available", "drink_type")
+    summernote_fields = ("description",)

@@ -3,5 +3,5 @@ from menus import views
 
 
 urlpatterns = [
-    path('', views.menus, name='menus'),
+    path("", views.menus, name="menus"),
 ]

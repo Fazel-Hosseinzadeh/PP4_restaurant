@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import FoodItem, DrinkItem
 
+
 def menus(request):
     """
     Retrieves and displays food and drink menus.
@@ -25,7 +26,7 @@ def menus(request):
         request,
         "menus/menus.html",
         {
-            'food_menu' : food_menu,
-            'drink_menu' : drink_menu,
-        }
+            "food_menu": food_menu,
+            "drink_menu": drink_menu,
+        },
     )
