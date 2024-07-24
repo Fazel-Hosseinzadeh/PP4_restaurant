@@ -16,6 +16,7 @@
 - [Backend Technologies](#backend-technologies)
 - [Development and Testing Tools](#development-and-testing-tools)
 - [Features](#features)
+- [Validations](#validations)
 
 ---
 ### About
@@ -384,4 +385,256 @@ Contact Form
 - Image Integration: Utilizes images for branding, blog posts, and other visual enhancements.
 - Design Consistency: Maintains a cohesive visual style throughout the website.
 
+[Go up](#table-of-contents)
 
+---
+
+### Validations
+
+#### Markup Validation: 
+The [W3C](https://validator.w3.org/nu/) Markup Validation Service has been used
+<details><summary>Home</summary>
+<img src="docs/w3c/home.jpg">
+</details>
+
+<details><summary>Menus</summary>
+<img src="docs/w3c/menus.jpg">
+</details>
+
+<details><summary>Blog</summary>
+<img src="docs/w3c/blog.jpg">
+</details>
+
+<details><summary>Post Detail</summary>
+<img src="docs/w3c/postdetail.jpg">
+</details>
+
+<details><summary>Book</summary>
+<img src="docs/w3c/book.jpg">
+</details>
+
+<details><summary>Edit / Delete Booking</summary>
+<img src="docs/w3c/bookedit.jpg">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/w3c/contact.jpg">
+</details>
+
+<details><summary>Register</summary>
+<img src="docs/w3c/register..jpg">
+</details>
+
+<details><summary>Login</summary>
+<img src="docs/w3c/login.jpg">
+</details>
+
+<details><summary>Logout</summary>
+<img src="docs/w3c/logout.jpg">
+</details>
+
+### JavaScript Validation
+JSHint JS Validation Service
+
+<details><summary>comment.js</summary>
+<img src="docs/jshint/commentjs.jpg">
+</details>
+
+### PEP8 Validation
+[CI PEP8](https://pep8ci.herokuapp.com/) Validation Service has been used for python files in the bellow apps:
+
+<hr><summary>Home</summary><hr>
+
+
+<details><summary>Admin.py</summary>
+<img src="docs/pep8/home_admin.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/pep8/home_models.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/pep8/home_urls.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/pep8/home_views.jpg">
+</details>
+
+
+<hr><summary>Menus</summary><hr>
+
+<details><summary>Admin.py</summary>
+<img src="docs/pep8/menus_admin.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/pep8/menus_models.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/pep8/menus_urls.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/pep8/menus_vies.jpg">
+</details>
+
+
+<hr><summary>Blog</summary><hr>
+
+<details><summary>Admin.py</summary>
+<img src="docs/pep8/blog_admin.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/pep8/blog_models.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/pep8/blog_urls.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/pep8">
+</details>
+
+<details><summary>forms.py</summary>
+<img src="docs/pep8/blog_forms.jpg">
+</details>
+
+<hr><summary>Book</summary><hr>
+
+
+<details><summary>Admin.py</summary>
+<img src="docs/pep8/book_admin.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/pep8/book_models.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/pep8/book_urls.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/pep8/book_views.jpg">
+</details>
+
+<details><summary>forms.py</summary>
+<img src="docs/pep8/book_forms.jpg">
+</details>
+
+
+<hr><summary>Contact</summary><hr>
+
+<details><summary>Admin.py</summary>
+<img src="docs/pep8/contact_admin.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/pep8/contact_models.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/pep8/contact_urls.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/pep8/contact_views.jpg">
+</details>
+
+<details><summary>forms.py</summary>
+<img src="docs/pep8/contact_forms.jpg">
+</details>
+
+
+### Lighthouse
+The Lighthouse has been tested on bellow templates
+#### Desktop
+<details><summary>home</summary>
+<img src="docs/lighthouse/desktop_home.jpg">
+</details>
+
+<details><summary>Menus</summary>
+<img src="docs/lighthouse/desktop_menus.jpg">
+</details>
+
+<details><summary>Blog</summary>
+<img src="docs/lighthouse/desktop_blog.jpg">
+</details>
+<details><summary>Post Detail</summary>
+<img src="docs/lighthouse/desktop_post_detail.jpg">
+</details>
+
+<details><summary>Book</summary>
+<img src="docs/lighthouse/desktop_book.jpg">
+</details>
+
+<details><summary>Book Edit</summary>
+<img src="docs/lighthouse/desktop_book_edit.jpg">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/lighthouse/desktop_contact.jpg">
+</details>
+
+#### Mobile
+<details><summary>home</summary>
+<img src="docs/lighthouse/mobile_home.jpg">
+</details>
+
+<details><summary>Menus</summary>
+<img src="docs/lighthouse/mobile_menus.jpg">
+</details>
+
+<details><summary>Blog</summary>
+<img src="docs/lighthouse/mobile_blog.jpg">
+</details>
+<details><summary>Post Detail</summary>
+<img src="docs/lighthouse/mobile_post_detail.jpg">
+</details>
+
+<details><summary>Book</summary>
+<img src="docs/lighthouse/mobile_book.jpg">
+</details>
+
+<details><summary>Book Edit</summary>
+<img src="docs/lighthouse/mobile_book_edit.jpg">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/lighthouse/mobile_contact.jpg">
+</details>
+
+### Wave
+For websites accessibility has been used.
+
+<details><summary>home</summary>
+<img src="docs/wave/home.jpg">
+</details>
+
+<details><summary>Menus</summary>
+<img src="docs/wave/menus.jpg">
+</details>
+
+<details><summary>Blog</summary>
+<img src="docs/wave/blog.jpg">
+</details>
+<details><summary>Post Detail</summary>
+<img src="docs/wave/post_detail.jpg">
+</details>
+
+<details><summary>Book</summary>
+<img src="docs/wave/book.jpg">
+</details>
+
+<details><summary>Book Edit</summary>
+<img src="docs/wave/book_edit.jpg">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/wave/contact.jpg">
+</details>

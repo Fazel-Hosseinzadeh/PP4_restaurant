@@ -41,13 +41,13 @@
       {% if page_obj.has_previous %}
       <a
         href="?page={{ page_obj.previous_page_number }}"
-        class="btn btn-outline-secondary col-4 col-md-2"
+        class="btn btn-outline-light col-4 col-md-2"
         >&laquo; PREV
       </a>
       {% endif %} {% if page_obj.has_next %}
       <a
         href="?page={{ page_obj.next_page_number }}"
-        class="btn btn-outline-secondary col-4 col-md-2"
+        class="btn btn-outline-light col-4 col-md-2"
       >
         NEXT &raquo;</a>
       {% endif %}
