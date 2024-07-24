@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from .models import Table, Booking
 from django.contrib import messages
@@ -11,8 +11,10 @@ def book(request):
     """
     Handles the booking process for tables.
 
-    Allows users to submit a booking request through a form. If the form is valid, a new booking is created
-    with the provided details. Displays feedback messages based on the success or failure of the form submission.
+    Allows users to submit a booking request through a form. If the form
+    is valid, a new booking is created
+    with the provided details. Displays feedback messages based on the success
+    or failure of the form submission.
 
     **Context**
     ``booking_form``
@@ -51,7 +53,9 @@ def book(request):
             for field, errors in booking_form.errors.items():
                 for error in errors:
                     messages.add_message(
-                        request, messages.ERROR, f"Error in {field} field: {error}"
+                        request,
+                        messages.ERROR,
+                        f"Error in {field} field: {error}"
                     )
 
     booking_form = BookingForm()
@@ -70,13 +74,16 @@ def edit(request, id):
     """
     Allows users to edit an existing booking.
 
-    Handles the display and updating of a booking instance. If the form is valid after submission, the booking's
-    status is set to 'Awaiting confirmation' and the changes are saved. Displays feedback messages based on the
+    Handles the display and updating of a booking instance. If the form is
+    valid after submission, the booking's
+    status is set to 'Awaiting confirmation' and the changes are saved.
+    Displays feedback messages based on the
     success or failure of the form submission.
 
     **Context**
     ``form``
-        An instance of :form:`book.BookingForm` pre-filled with the booking's current data for editing.
+        An instance of :form:`book.BookingForm` pre-filled with the booking's
+        current data for editing.
     ``booking``
         The :model:`book.Booking` instance being edited.
 
@@ -106,14 +113,18 @@ def edit(request, id):
     else:
         booking = Booking.objects.get(pk=id)
         form = BookingForm(instance=booking)
-        return render(request, "book/edit.html", {"form": form, "booking": booking})
+        return render(request,
+                      "book/edit.html",
+                      {"form": form, "booking": booking}
+                      )
 
 
 def delete(request, id):
     """
     Handles the deletion of a booking.
 
-    Deletes the specified booking instance when the request method is POST. After deletion, the user is redirected
+    Deletes the specified booking instance when the request method is POST.
+    After deletion, the user is redirected
     to the booking list view.
 
     **Context**

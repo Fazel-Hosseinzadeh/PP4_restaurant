@@ -18,7 +18,8 @@ class BookingForm(forms.ModelForm):
 
     **Fields:**
         name (str): The name of the person making the booking.
-        phone (PhoneNumberField): The phone number of the person making the booking.
+        phone (PhoneNumberField): The phone number of the person
+        making the booking.
         email (str): The email of the person making the booking.
         guest_count (int): The number of guests for the booking.
         table (Table): The table being booked.

@@ -45,7 +45,8 @@ status_options = (
 # booking model
 class Booking(models.Model):
     """
-    Stores a single booking entry related to :model:`auth.User` and :model:`Table`.
+    Stores a single booking entry related to :model:`auth.User` and
+    :model:`Table`.
     """
 
     user = models.ForeignKey(
@@ -72,7 +73,10 @@ class Booking(models.Model):
         max_length=25, choices=time_slots, default="13:00"
     )
     table = models.ForeignKey(
-        Table, on_delete=models.CASCADE, related_name="table_reserved", null=True
+        Table,
+        on_delete=models.CASCADE,
+        related_name="table_reserved",
+        null=True
     )
 
     class Meta:
@@ -80,4 +84,7 @@ class Booking(models.Model):
         unique_together = ("requested_date", "requested_time", "table")
 
     def __str__(self):
-        return f"name {self.name} | guest Nr:{self.guest_count} | on {self.requested_date} | {self.status}"
+        return (
+            f"name {self.name} | guest Nr:{self.guest_count} |"
+            f"on {self.requested_date} | {self.status}"
+            )
