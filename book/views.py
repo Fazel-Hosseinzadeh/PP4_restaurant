@@ -136,4 +136,9 @@ def delete(request, id):
     if request.method == "POST":
         booking = Booking.objects.get(pk=id)
         booking.delete()
+        messages.add_message(
+                request,
+                messages.SUCCESS,
+                "Booking deleted successfully",
+            )
     return HttpResponseRedirect(reverse("book"))
