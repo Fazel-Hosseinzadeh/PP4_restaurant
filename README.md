@@ -19,6 +19,7 @@
 - [Heroku Deployment Guide](#heroku-deployment-guide)
 - [Fork a Repository](#fork-a-repository)
 - [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
 ---
 ### About
@@ -1200,3 +1201,11 @@ Bootstrap carousel was implemented.
 
 2.  The Code Institute walkthrough project
 3.  Inspired by [CI_PP4_the_diplomat](https://github.com/ArronBeale/CI_PP4_the_diplomat)
+
+[Go up](#table-of-contents)
+
+---
+
+### Acknowledgements
+- Code Institute
+- My Mentor Mo Shami
