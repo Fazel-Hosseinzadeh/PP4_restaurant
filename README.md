@@ -180,6 +180,9 @@ Django builtin model and has following fields:
 - is_active
 - date_joined
 
+---
+
+
 ###### FoodItem
 This model has following fields:
 - food_name
@@ -195,6 +198,13 @@ This model has following fields:
 - price
 - drink_type
 - available
+
+<details><summary>FoodItem and DrinkItem Models</summary>
+<img src="docs/models/Menus_models.jpg">
+</details>
+
+---
+
 
 ###### Post
 This model has following fields:
@@ -215,6 +225,13 @@ This model has following fields:
 - created_on
 - approved
 
+
+<details><summary>Post and Comment Models</summary>
+<img src="docs/models/Blog_models.jpg">
+</details>
+
+---
+
 ###### Table
 This model has following fields:
 - table_name
@@ -234,6 +251,13 @@ This model has following fields:
 - requested_time
 - table(ForeignKey)
 
+<details><summary>Table and Booking Models</summary>
+
+<img src="docs/models/Booking_models.jpg">
+</details>
+
+---
+
 ###### ContactContent
 This model has following fields:
 - title
@@ -246,6 +270,11 @@ This model has following fields:
 - email
 - message
 - read
+
+<details><summary>ContactContent and ContactMessage Models</summary>
+<img src="docs/models/Contactus_models.jpg">
+</details>
+<br>
 
 [Go up](#table-of-contents)
 
@@ -634,3 +663,7 @@ For websites accessibility has been used.
 <details><summary>Contact Us</summary>
 <img src="docs/wave/contact.jpg">
 </details>
+
+[Go up](#table-of-contents)
+
+---
