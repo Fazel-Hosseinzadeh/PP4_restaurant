@@ -717,3 +717,382 @@ For websites accessibility has been used.
 [Go up](#table-of-contents)
 
 ---
+
+
+## Testing
+- All the tests are done manually.
+
+1. As a User I can navigate across the site so that I can move to each page of the site easily
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on the 'Home' link in the navigation bar | Homepage will load| Works as expected |
+| Click on the 'Menus' link in the navigation bar | Food and Drinkss will load| Works as expected |
+| In the Menus page click on the 'Foods' Tab| Food menu will load| Works as expected |
+| In the Menus page click on the 'Drinks' Tab| Drink menu will load| Works as expected |
+| Click on the 'Blog' link in the navigation bar | Blog page will load| Works as expected |
+| In the 'Blog' Page click on a 'Post'| 'Post Detail' page will load| Works as expected |
+| Click on the 'Book' link in the navigation bar | Reservations page will load| Works as expected |
+| In the 'reservation' page click on the 'Book a Table' Tab | 'Booking Form' will load| Works as expected |
+| In the 'reservation' page click on the 'My Bookings' Tab | 'My Booking' list will load| Works as expected |
+| Click on the 'Contact Us' link in the navigation bar | Contact us page will load| Works as expected |
+| Click on the 'Register' link in the navigation bar | Sign up page will load| Works as expected |
+| Click on the 'Login' link in the navigation bar | Login page will load| Works as expected |
+| Click on the 'Logout' link in the navigation bar | Logout page will load| Works as expected |
+
+<details><summary>Test 1</summary>
+<img src="docs/test/u1-home.jpg">
+<img src="docs/test/u1-menus.jpg">
+<img src="docs/test/u1-menus-food.jpg">
+<img src="docs/test/u1-menus-drink.jpg">
+<img src="docs/test/u1-blog.jpg">
+<img src="docs/test/u1-post-detail.jpg">
+<img src="docs/test/u1-book.jpg">
+<img src="docs/test/u1-book-form.jpg">
+<img src="docs/test/u1-book-mybooking.jpg">
+<img src="docs/test/u1-contact.jpg">
+<img src="docs/test/u1-login.jpg">
+<img src="docs/test/u1-logout.jpg">
+<img src="docs/test/u1-register.jpg">
+
+
+
+</details>
+
+
+
+
+2.  As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | For Navbar see Test 1 | For Navbar see Test 1 | Works as expected |
+ | Scroll Media links in the footer at bottom of page | Click on social  Media links | Works as expected |
+
+ <details><summary>Test 2</summary>
+<img src="docs/test/u2.jpg">
+
+
+</details>
+
+
+3. As a User I can view the opening hours and contact details of a business so that I know when the business is open and how to contact them via email, phone and social media.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | For Social Media Test see Test 2 | For Social Media Test see Test 2 | Works as expected |
+ | Navigate to Contact Us page | See the contact informations and contact form | Works as expected |
+
+ <details><summary>Test 3</summary>
+<img src="docs/test/u3.jpg">
+
+</details>
+
+4. As a User I can create a booking by selecting a date and time so that I can reserve a table for my desired visit.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and then click on Book a Table tab| See the booking form | Works as expected |
+
+ <details><summary>Test 4</summary>
+<img src="docs/test/u4.jpg">
+
+</details>
+
+
+5. As a User I can update my existing booking so that I can choose another available time and date if needed.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and then click on My Bookings tab then click on Edit button| See the booking form alreay filled with old info ready to be changed | Works as expected |
+
+ <details><summary>Test 5</summary>
+<img src="docs/test/u5-edit-btn.jpg">
+<img src="docs/test/u5-update.jpg">
+
+</details>
+
+6. As a User I can delete my existing booking so that I can cancel my table reservation.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and then click on My Bookings tab then click on Delete button, then in the modal form click on delete| Seeing that the booking is removed from my booking list | Works as expected |
+
+ <details><summary>Test 6</summary>
+<img src="docs/test/u5-edit-btn.jpg">
+<img src="docs/test/u6.jpg">
+
+</details>
+
+7. As a User I can view the details of my booking so that I can remind myself of the date, time, and any other relevant information about my booking.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and then click on My Bookings tab | Seeing that the booking is removed from my booking list | Works as expected |
+
+ <details><summary>Test 7</summary>
+<img src="docs/test/u7.jpg">
+
+</details>
+
+8. As a User I can be notified of the successful creation, edit, or deletion of a booking so that I know the action I took has been processed successfully.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and make reservation | Seeing a message to tell either the booking was successfull or not | Works as expected |
+ | Navigate to Book page and update a reservation | Seeing a message to tell either the updating was successfull or not | Works as expected |
+  | Navigate to Book page and dlete a reservation | Seeing a message to tell either the delete was successfull or not | Works as expected |
+
+ <details><summary>Test 8</summary>
+<img src="docs/test/u8-book.jpg">
+<img src="docs/test/u8-update.jpg">
+<img src="docs/test/u8-delete.jpg">
+
+</details>
+
+
+9. As a User I can register as prompted during the booking process so that I will be able to easily book a table or make a reservation if I wish.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Register page and fill up the form correctly and sign up | Seeing a notification of successful signed up and beeing loged in | Works as expected |
+
+
+
+<details><summary>Test 9</summary>
+<img src="docs/test/u9-form.jpg">
+<img src="docs/test/u9-notification.jpg">
+
+
+</details>
+
+
+10. As a User I can register to create an account so that my details are stored for quicker booking in the future.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Booking page and My Bookings tab, if you are not loged in you can use a link to redirect you to log in page | Seeing a loged in button | Works as expected |
+  | Navigate to Booking page and Book a Table tab, if you are not loged in you can use a link to redirect you to log in page | Seeing a loged in button | Works as expected |
+
+
+
+<details><summary>Test 10</summary>
+<img src="docs/test/u10.jpg">
+<img src="docs/test/u10-book.jpg">
+
+
+
+</details>
+
+11. As a User I can log in to the website so that I can book a table at the business.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to login page and login, then navigate to book page and Book a Table tab | Seeing booking form | Works as expected |
+
+<details><summary>Test 11</summary>
+<img src="docs/test/u11-form.jpg">
+<img src="docs/test/u11-not.jpg">
+
+</details>
+
+
+12. As a User I can see my login status so that I know if I am currently logged in to the website.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to login page and login | Seeing a notification that successfully loged in | Works as expected |
+
+<details><summary>Test 12</summary>
+<img src="docs/test/u12.jpg">
+
+</details>
+
+
+13. As a User I can view the site's blog posts so that I can learn additional information and read articles on a variety of topics.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to blog page and then use pagination to find your desired post and click on it | Seeing the list of posts and after clicking on a post seeing the datail of the post| Works as expected |
+
+<details><summary>Test 13</summary>
+<img src="docs/test/u13-list.jpg">
+<img src="docs/test/u13-detail.jpg">
+
+</details>
+
+
+14. As a User I can view the food and drink menu of a business so that I can decide whether to eat or drink at the establishment.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Menus page and then choose either food menu or drink menu tab | Seeing the food menu or drink menue related to tab you clicked| Works as expected |
+
+<details><summary>Test 14</summary>
+<img src="docs/test/u14-food.jpg">
+<img src="docs/test/u14-drink.jpg">
+
+</details>
+
+
+15. As a User I can not book a date in the past so that my booking is valid and reflects a future appointment.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and then choose Book a Table tab | Seeing in the date picker you can choose from tomorrow and after| Works as expected |
+
+<details><summary>Test 15</summary>
+<img src="docs/test/u15.jpg">
+
+</details>
+
+16. As a User I can view blog posts paginated so that I can browse through a large number of posts without feeling overwhelmed.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Blog page | Seeing the list of posts paginated 3 posts per page| Works as expected |
+
+<details><summary>Test 16</summary>
+<img src="docs/test/u16-1.jpg">
+<img src="docs/test/u16-2.jpg">
+<img src="docs/test/u16-3.jpg">
+
+</details>
+
+17. As a User I can not book a table that is already booked so that my booking is valid and I am not placed at a table that is unavailable.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and Book a Table tab and reserve a date and time and a table which you reserved before| Seeing an unsuccessful notification which says this table already reserved| Works as expected |
+
+<details><summary>Test 17</summary>
+<img src="docs/test/u17.jpg">
+
+
+</details>
+
+#### Admin / Authorised User
+
+18. As an Admin or Authorized User I can log in to the website so that I can access the back-end of the site and perform administrative tasks.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login| Seeing an successful login and admin panel | Works as expected |
+
+<details><summary>Test 18</summary>
+<img src="docs/test/u18-out.jpg">
+<img src="docs/test/u18-in.jpg">
+
+</details>
+
+19. As an Admin / Authorised User I can manually add or edit or delete a booking so that I can book/cancel/modify a table for a customer who phones or emails the business.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Bookings and ADD or change a booking| Seeing a form to add a booking or a list of bookings that you can edit them| Works as expected |
+
+<details><summary>Test 19</summary>
+<img src="docs/test/u19-add.jpg">
+<img src="docs/test/u19-change.jpg">
+<img src="docs/test/u19-bookings-panel.jpg">
+<img src="docs/test/u19-edit.jpg">
+
+</details>
+
+
+20. As an Admin / Authorised User I can accept or reject bookings so that we can manage availability and avoid double bookings.
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Bookings and choose desired booking and on the status field you can choose the desired action for that booking| Seeing change of the status on that booking | Works as expected |
+
+<details><summary>Test 20</summary>
+<img src="docs/test/u20.jpg">
+
+</details>
+
+
+21. As an Admin I can login and manage the food and cocktail menu by adding or removing items so that we can keep the menu updated with new offerings and remove unavailable items.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Drink Itemes or Food Items and click on Add or Change to Add or Edit the Items| Seeing a form to add or edit Food or Drink Items | Works as expected |
+
+<details><summary>Test 21</summary>
+<img src="docs/test/u21-side.jpg">
+<img src="docs/test/u21-food.jpg">
+<img src="docs/test/u21-drink.jpg">
+
+
+</details>
+
+
+
+22. As an Admin I can create, read, update, and delete food and drinks items from the database so that we can add, remove, rename, and view all our food and drinks offerings.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Drink Itemes or Food Items and click on Change to Edit the Items| Seeing a list of stored data as foods or drink items and click on them to edit them in a from | Works as expected |
+
+<details><summary>Test 22</summary>
+<img src="docs/test/u22-drink.jpg">
+<img src="docs/test/u22-food.jpg">
+<img src="docs/test/u22-edit.jpg">
+
+
+</details>
+
+23. As an Admin / Authorised User I can search through bookings and menus so that I can find the information I need efficiently.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Drink Itemes or Food Items or Bookings then you should be able to see filters and search bar on the right side or top of the page | Seeing filters and search bars in the Bookings, Food Items and Drink Items | Works as expected |
+
+<details><summary>Test 23</summary>
+<img src="docs/test/u23-drink.jpg">
+<img src="docs/test/u23-food.jpg">
+<img src="docs/test/u23-book.jpg">
+
+
+</details>
+24. As an Admin / Authorized User I can filter bookings by date so that I can see what bookings we have for a particular day.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Bookings then on the right there is a filter sied bar add the start and end of the period which  you are looking for| Seeing a list of which are booked only on that perid | Works as expected |
+
+<details><summary>Test 24</summary>
+<img src="docs/test/u24.jpg">
+
+</details>
+
+
+#### Site Owner
+
+25. As a Site Owner I can provide a contact us form so that users can get in touch with me.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to [Admin page](https://pp4-restaurant-blackforest-8f755e627638.herokuapp.com/admin/login/?next=/admin/) and login and then on the side bar click on Contact Content Add then fill up the form as a content which will be appear on the Contact Us page| Seeing a for of Contact content | Works as expected |
+
+<details><summary>Test 25</summary>
+<img src="docs/test/u25.jpg">
+<img src="docs/test/u25-form.jpg">
+
+</details>
+
+26. As a Site Owner I can validate data entered into my site so that all submitted data is correct and avoids errors in my system.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+ | Navigate to Book page and book a Table form and insert an unvalid data| Seeing a notification saying the data inserted is not correct | Works as expected |
+
+<details><summary>Test 26</summary>
+<img src="docs/test/u26.jpg">
+</details>
+
+
+[Go up](#table-of-contents)
+
+---
