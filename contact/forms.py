@@ -6,7 +6,8 @@ class ContactForm(forms.ModelForm):
     """
     Form class for users to send contact messages.
 
-    Provides a form for users to submit their name, email, and a message. This form is used to capture
+    Provides a form for users to submit their name, email, and a message. This
+    form is used to capture
     contact messages from users and create `ContactMessage` instances.
 
     **Fields**

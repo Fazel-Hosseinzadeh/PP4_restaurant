@@ -8,14 +8,16 @@ def contact(request):
     """
     Handles the contact form submission and displays contact content.
 
-    Retrieves the most recent `ContactContent` and renders a contact form. If the form is submitted
-    via POST, it processes the form data to create a new `ContactMessage` instance. Provides feedback
+    Retrieves the most recent `ContactContent` and renders a contact form.
+    If the form is submitted
+    via POST, it processes the form data to create a new `ContactMessage`
+    instance. Provides feedback
     to the user based on the success or failure of the form submission.
 
     **Context**
 
     ``contact_form``
-        An instance of :form:`contact.ContactForm` for submitting user messages.
+        An instance of :form:`contact.ContactForm` for submitting user messages
     ``content``
         The most recent instance of :model:`contact.ContactContent`.
 
@@ -44,7 +46,9 @@ def contact(request):
             for field, errors in contact_form.errors.items():
                 for error in errors:
                     messages.add_message(
-                        request, messages.ERROR, f"Error in {field} field: {error}"
+                        request,
+                        messages.ERROR,
+                        f"Error in {field} field: {error}"
                     )
 
     contact_form = ContactForm()

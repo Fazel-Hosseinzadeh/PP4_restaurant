@@ -8,12 +8,14 @@ class ContactContentAdmin(SummernoteModelAdmin):
     """
     Admin interface for managing ContactContent.
 
-    Provides a rich-text editor for the `content` field using Summernote. This admin class allows users to
+    Provides a rich-text editor for the `content` field using Summernote.
+    This admin class allows users to
     edit the content with enhanced text formatting options.
 
     **Fields**
     ``summernote_fields``
-        Specifies the fields to be rendered with the Summernote rich-text editor.
+        Specifies the fields to be rendered with
+        the Summernote rich-text editor.
 
     **Template**
     None
@@ -27,7 +29,8 @@ class ContactMessageAdmin(admin.ModelAdmin):
     """
     Admin interface for managing ContactMessage instances.
 
-    Displays key fields in the admin list view, provides search functionality, and allows filtering by
+    Displays key fields in the admin list view, provides search functionality,
+    and allows filtering by
     the read status. Includes a custom action to mark messages as read.
 
     **Fields**
@@ -63,6 +66,7 @@ class ContactMessageAdmin(admin.ModelAdmin):
         """
         Marks selected messages as read.
 
-        Updates the `read` field to `True` for the selected `ContactMessage` instances.
+        Updates the `read` field to `True` for the selected `ContactMessage`
+        instances.
         """
         queryset.update(read=True)
