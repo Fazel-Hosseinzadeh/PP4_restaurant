@@ -6,110 +6,107 @@
     <h1 class="mb-5">Black Forest Cuisine</h1>
     <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
     <p class="lead h5 mt-4">
-        <em>Experience the flavors of our region with our carefully curated menus.
+        <em>Experience the flavors of our region with our carefully curated menus.</em>
     </p>
   </div>
 
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-11 col-md-9 ">
+  <div class="row justify-content-center mt-5">
+    <div class="col-11 col-md-9 ">
 
-            <!--Tabs title-->
-            <nav>
-                <div class="nav nav-tabs h3 mb-5 p-4" id="nav-tab" role="tablist">
-                  <button
-                    class="nav-link active col-6"
-                    id="nav-food-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-food"
-                    type="button"
-                    role="tab"
-                    aria-controls="nav-food"
-                    aria-selected="true"
-                  >
-                  <i class="fa-solid fa-bowl-food"></i> Food Menu
-                  </button>
-                  <button
-                    class="nav-link col-6"
-                    id="nav-drink-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-drink"
-                    type="button"
-                    role="tab"
-                    aria-controls="nav-drink"
-                    aria-selected="false"
-                  >
-                  <i class="fa-solid fa-martini-glass"></i> Drink Menu
-                  </button>
-                </div>
-            </nav>
+      <!--Tabs title-->
+      <nav>
+          <div class="nav nav-tabs h3 mb-5 p-4" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active col-6"
+              id="nav-food-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-food"
+              type="button"
+              role="tab"
+              aria-controls="nav-food"
+              aria-selected="true"
+            >
+            <i class="fa-solid fa-bowl-food"></i> Food Menu
+            </button>
+            <button
+              class="nav-link col-6"
+              id="nav-drink-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-drink"
+              type="button"
+              role="tab"
+              aria-controls="nav-drink"
+              aria-selected="false"
+            >
+            <i class="fa-solid fa-martini-glass"></i> Drink Menu
+            </button>
+          </div>
+      </nav>
 
               <!--Tabs Content-->
             <div class="tab-content " id="nav-tabContent">
 
-                <!--Foods Content-->
-                <div
-                  class="tab-pane fade show active"
-                  id="nav-food"
-                  role="tabpanel"
-                  aria-labelledby="nav-food-tab"
-                  tabindex="0"
+              <!--Foods Content-->
+              <div
+                class="tab-pane fade show active"
+                id="nav-food"
+                role="tabpanel"
+                aria-labelledby="nav-food-tab"
+                tabindex="0"
                 >
-                    <!--Staters-->
-                    <div class="p-5 border-3 border border-light rounded-5 my-4">
-                        
-                        <h2 class="justify-content-center text-center ">Starters</h2>
-                        <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
-                        {% for food in food_menu %}
-                        {% if food.food_type == 0 and food.available == 1 %}
-                        <br><h4>{{ food.food_name }}</h4>
-                        <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
-                        <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
-                        <br>
-                        <div class="justify-content-center text-center mx-auto"><hr></div>
+                <!--Staters-->
+                <div class="p-5 border-3 border border-light rounded-5 my-4">
+                    
+                    <h2 class="justify-content-center text-center ">Starters</h2>
+                    <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
+                    {% for food in food_menu %}
+                    {% if food.food_type == 0 and food.available == 1 %}
+                    <br><h4>{{ food.food_name }}</h4>
+                    <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
+                    <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
+                    <br>
+                    <div class="justify-content-center text-center mx-auto"><hr></div>
 
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-
-                    <!--Main-->
-                    <div class="p-5 border-3 border border-success rounded-5 my-4">
-                        <h2 class="justify-content-center text-center ">Main Courses</h2>
-                        <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
-                        {% for food in food_menu %}
-                        {% if food.food_type == 1 and food.available == 1 %}
-                        <br><h4>{{ food.food_name }}</h4>
-                        <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
-                        <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
-                        <br>
-                        <div class="justify-content-center text-center mx-auto"><hr></div>
-
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-                    <!--Dessert-->
-                    <div class="p-5 border-3 border border-warning rounded-5 my-4">
-                        <h2 class="justify-content-center text-center ">Desserts</h2>
-                        <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
-                        {% for food in food_menu %}
-                        {% if food.food_type == 2 and food.available == 1 %}
-                        <br><h4>{{ food.food_name }}</h4>
-                        <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
-                        <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
-                        <br>
-                        <div class="justify-content-center text-center mx-auto"><hr></div>
-
-                        {% endif %}
-                        {% endfor %}
-                    </div>
-
-
+                    {% endif %}
+                    {% endfor %}
                 </div>
 
-                <!--Drinks Content-->
-                <div
+                <!--Main-->
+                <div class="p-5 border-3 border border-success rounded-5 my-4">
+                    <h2 class="justify-content-center text-center ">Main Courses</h2>
+                    <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
+                    {% for food in food_menu %}
+                    {% if food.food_type == 1 and food.available == 1 %}
+                    <br><h4>{{ food.food_name }}</h4>
+                    <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
+                    <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
+                    <br>
+                    <div class="justify-content-center text-center mx-auto"><hr></div>
+
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!--Dessert-->
+                <div class="p-5 border-3 border border-warning rounded-5 my-4">
+                    <h2 class="justify-content-center text-center ">Desserts</h2>
+                    <div class="col-4 justify-content-center text-center mx-auto"><hr></div>
+                    {% for food in food_menu %}
+                    {% if food.food_type == 2 and food.available == 1 %}
+                    <br><h4>{{ food.food_name }}</h4>
+                    <div class="text-bg-secondary p-3 rounded-3">Description: {{ food.description | safe }} </div>
+                    <span class="badge text-bg-primary">Price: €{{ food.price }}</span>
+                    <br>
+                    <div class="justify-content-center text-center mx-auto"><hr></div>
+
+                    {% endif %}
+                    {% endfor %}
+                </div>
+              </div>
+
+              <!--Drinks Content-->
+              <div
                 class="tab-pane fade"
                 id="nav-drink"
                 role="tabpanel"
@@ -131,7 +128,6 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-
 
                 <!--Beers-->
                 <div class="p-5 border-3 border border-success rounded-5 my-4">
@@ -164,16 +160,16 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-                </div>
-            </div>
+
+              </div>
               
-        </div>
-    </div>
+            </div>
+  </div>
 
     <!--Sticky button-->
     <div class="row sticky-bottom">
       <div class="text-start">
-        <a href="#nav-tab" class="btn btn-outline-light sticky-bottom   offset-10 offset-md-11 p-3"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
+        <a href="#nav-tab" class="btn btn-outline-light sticky-bottom offset-10 offset-md-11 p-3"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
 
       </div>
     </div>
