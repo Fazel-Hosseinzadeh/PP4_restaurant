@@ -9,8 +9,9 @@
 - [User Goals](#user-goals)
 - [Site Owner Goals](#site-owner-goals)
 - [User Requirements and Expectations](#user-requirements-and-expectations)
-- [Target Audience](target-audience)
+- [Target Audience](#target-audience)
 - [User Stories](#user-stories)
+- [Design](#design)
 
 ---
 ### About
@@ -131,6 +132,115 @@ The Black Forest Restaurant is a web application that provides a platform for cu
 
 ![Kanban](docs/github/kanban.jpg)
 </details>
+
+[Go up](#table-of-contents)
+
+---
+
+### Design
+
+#### Color Scheme
+
+- The project employs a dark theme primarily based on the Bootstrap 5 framework. This provides a consistent and visually appealing color palette throughout the application.
+
+####  Website Structure
+The website features a consistent layout across pages, including a top navigation bar and a hamburger menu for smaller screens. The footer displays social media links for enhanced user engagement.
+
+##### Core Pages
+- Home: The entry point, showcasing key features through interactive cards for booking, menu exploration, and blog access.
+
+- Menus: Presents food and drink options categorized into starters, mains, desserts, wines, beers, and cocktails.
+- Blog: Displays a paginated list of blog posts with detailed views and commenting functionality for registered users.
+- Booking: Enables registered users to create, view, edit, and cancel reservations and see theeir reservaion list.
+- Contact Us: Provides contact information and a contact form for unregistered user inquiries.
+User Management: Includes login, registration, and logout functionalities.
+
+####  Database
+
+The website utilizes a robust backend built with Python and the Django framework. Data is persisted in a PostgreSQL database hosted on [ElephantSQL](https://www.elephantsql.com/docs/index.html) and deployed on [Heroku](https://www.heroku.com/).
+
+##### Models
+
+###### User
+Django builtin model and has following fields:
+- user_id
+- password
+- last_login
+- is_superuser
+- username
+- first_name
+- last_name
+- email
+- is_staff
+- is_active
+- date_joined
+
+###### FoodItem
+This model has following fields:
+- food_name
+- description
+- price
+- food_type
+- available
+
+###### DrinkItem
+This model has following fields:
+- drink_name
+- description
+- price
+- drink_type
+- available
+
+###### Post
+This model has following fields:
+- title
+- slug
+- author(ForeignKey)
+- content
+- created_on
+- status
+- excerpt
+- updated_on
+
+###### Comment
+This model has following fields:
+- post(ForeignKey)
+- author(ForeignKey)
+- body
+- created_on
+- approved
+
+###### Table
+This model has following fields:
+- table_name
+- max_seats
+
+###### Booking
+This model has following fields:
+- user(ForeignKey)
+- name
+- email
+- phone
+- status
+- seats
+- guest_count
+- created_date
+- requested_date
+- requested_time
+- table(ForeignKey)
+
+###### ContactContent
+This model has following fields:
+- title
+- updated_on
+- content
+
+###### ContactMessage
+This model has following fields:
+- name
+- email
+- message
+- read
 
 [Go up](#table-of-contents)
 
