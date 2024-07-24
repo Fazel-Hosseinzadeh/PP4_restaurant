@@ -6,8 +6,10 @@ def menus(request):
     """
     Retrieves and displays food and drink menus.
 
-    Fetches all `FoodItem` and `DrinkItem` instances from the database and passes them to the template for display.
-    This view provides a comprehensive list of available food and drink items on the menu.
+    Fetches all `FoodItem` and `DrinkItem` instances from the database and
+    passes them to the template for display.
+    This view provides a comprehensive list of available food and drink items
+    on the menu.
 
     **Context**
 

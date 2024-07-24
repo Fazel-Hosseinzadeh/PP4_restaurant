@@ -19,19 +19,24 @@ class FoodItem(models.Model):
     """
     Stores information about a food item.
 
-    Represents a food item with details including its name, description, price, type, and availability.
-    The `food_type` field uses predefined choices to categorize the food item. The `available` field indicates
+    Represents a food item with details including its name, description,
+    price, type, and availability.
+    The `food_type` field uses predefined choices to categorize the food item.
+    The `available` field indicates
     whether the food item is currently available.
 
     **Fields**
     ``food_name``
-        A CharField to store the name of the food item, with a maximum length of 50 characters and unique value.
+        A CharField to store the name of the food item, with a maximum length
+        of 50 characters and unique value.
     ``description``
-        A CharField to store a description of the food item, with a maximum length of 200 characters and unique value.
+        A CharField to store a description of the food item, with a maximum
+        length of 200 characters and unique value.
     ``price``
         A FloatField to store the price of the food item.
     ``food_type``
-        An IntegerField to categorize the food item using predefined choices (e.g., Starters, Mains, Desserts).
+        An IntegerField to categorize the food item using predefined choices
+        (e.g., Starters, Mains, Desserts).
     ``available``
         A BooleanField indicating whether the food item is available.
 
@@ -41,7 +46,8 @@ class FoodItem(models.Model):
 
     **Methods**
     ``__str__``
-        Returns a string representation of the food item including its name and type.
+        Returns a string representation of the food item including its name
+        and type.
     """
 
     food_name = models.CharField(max_length=50, unique=True)
@@ -61,19 +67,24 @@ class DrinkItem(models.Model):
     """
     Stores information about a drink item.
 
-    Represents a drink item with details including its name, description, price, type, and availability.
-    The `drink_type` field uses predefined choices to categorize the drink item. The `available` field indicates
+    Represents a drink item with details including its name, description,
+    price, type, and availability.
+    The `drink_type` field uses predefined choices to categorize the drink item
+    The `available` field indicates
     whether the drink item is currently available.
 
     **Fields**
     ``drink_name``
-        A CharField to store the name of the drink item, with a maximum length of 50 characters and unique value.
+        A CharField to store the name of the drink item, with a maximum length
+        of 50 characters and unique value.
     ``description``
-        A CharField to store a description of the drink item, with a maximum length of 200 characters and unique value.
+        A CharField to store a description of the drink item, with a maximum
+        length of 200 characters and unique value.
     ``price``
         A FloatField to store the price of the drink item.
     ``drink_type``
-        An IntegerField to categorize the drink item using predefined choices (e.g., Wines, Beers, Cocktails).
+        An IntegerField to categorize the drink item using predefined choices
+        (e.g., Wines, Beers, Cocktails).
     ``available``
         A BooleanField indicating whether the drink item is available.
 
@@ -83,7 +94,8 @@ class DrinkItem(models.Model):
 
     **Methods**
     ``__str__``
-        Returns a string representation of the drink item including its name and type.
+        Returns a string representation of the drink item including its name
+        and type.
     """
 
     drink_name = models.CharField(max_length=50, unique=True)
