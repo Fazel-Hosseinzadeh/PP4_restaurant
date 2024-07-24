@@ -325,14 +325,18 @@ This model has following fields:
 
 ####  Core Functionalities
 - Layout: Consistent layout across pages with a top navigation bar and a responsive hamburger menu for smaller screens.
+
+User stories covered: 1, 2
 <br>
-- User stories covered: 1, 2
 
 - Logo: Custom logo displayed prominently on all pages.
+User stories covered: 1, 2
 <br>
-- User stories covered: 1, 2
 
 - User Authentication: Secure login, registration, and logout functionalities.
+
+User stories covered: 9, 10, 11, 12
+<br>
 <details><summary>Navigation Bar</summary>
 
 Navigation bar
@@ -356,22 +360,33 @@ Logout
 Register
 ![Register](docs/features/register.jpg)
 </details>
-
+<br>
 - Footer: Includes social media links and copyright information.
+User stories covered: 2, 3
+<br>
+
 <details><summary>Footer</summary>
 
 ![Footer](docs/features/footer.jpg)
 
 </details>
 
-<br>
-- User stories covered: 6, 7
-
 
 ####  Booking System
 - Table Reservations: Users can book tables with specified guest count, date, and time.
+
+User stories covered: 4
+<br>
+
 - Booking Management: Users can view, edit, and cancel their bookings.
+
+User stories covered: 5, 6, 7
+<br>
+
 - Booking Status: Users can be informed from My Bookings section about the status of their bookings.
+User stories covered: 8, 17
+<br>
+
 <details><summary>Booking</summary>
 
 Table Reservations
@@ -383,7 +398,15 @@ My Bookings
 
 ####  Content Management
 - Blog: Features blog posts with pagination, Post detailed views, and commenting functionality.
+
+User stories covered: 13, 16
+<br>
+
 - Comment Moderation: Admin approval process for comments to ensure quality control.
+
+User stories covered: 18
+<br>
+
 
 <details><summary>Blog</summary>
 
@@ -400,7 +423,13 @@ Post Comment
 
 ####  Contact
 - Contact Form: Allows users to send messages to the business.
+User stories covered: 25
+<br>
+
 - Contact Information: Provide other contact ways
+User stories covered: 3
+<br>
+
 
 <details><summary>Contact Us</summary>
 
@@ -414,12 +443,26 @@ Contact Form
 
 ####  Additional Features
 - Pagination: Implemented for blog posts to enhance user experience.
+User stories covered: 16
+<br>
+
 - Responsive Design: Ensures optimal viewing on various devices.
+User stories covered: 26
+<br>
+
 - Social Media Integration: Includes links to social media platforms for increased visibility.
+User stories covered: 2
+<br>
+
 
 ####  Visual Elements
 - Image Integration: Utilizes images for branding, blog posts, and other visual enhancements.
+User stories covered: 2, 3, 13, 14, 25
+<br>
+
 - Design Consistency: Maintains a cohesive visual style throughout the website.
+User stories covered: 1, 2, 26
+<br>
 
 [Go up](#table-of-contents)
 
