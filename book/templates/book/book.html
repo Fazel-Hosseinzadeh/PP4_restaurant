@@ -21,7 +21,7 @@
                 role="tab"
                 aria-controls="nav-book"
                 aria-selected="true"
-              >
+                >
               <i class="fa-solid fa-utensils"></i> Book a Table
               </button>
               <button
@@ -33,7 +33,7 @@
                 role="tab"
                 aria-controls="nav-mybook"
                 aria-selected="false"
-              >
+                >
               <i class="fa-solid fa-list"></i>  My Bookings
               </button>
             </div>
@@ -49,7 +49,7 @@
               role="tabpanel"
               aria-labelledby="nav-book-tab"
               tabindex="0"
-              >
+                >
                 <div class="container">
                     <div class="row justify-content-center">
                 
@@ -116,8 +116,7 @@
                             text-bg-danger
                             {% elif booking.status == 'Booking Expired'%}
                             text-bg-warning
-                            {% endif %}
-                            ">
+                            {% endif %}">
                             {{booking.status}} 
                             </span><br>
                             
