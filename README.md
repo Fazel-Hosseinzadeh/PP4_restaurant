@@ -15,6 +15,10 @@
 - [Development and Testing Tools](#development-and-testing-tools)
 - [Features](#features)
 - [Validations](#validations)
+- [Bugs](#bugs)
+- [Heroku Deployment Guide](#heroku-deployment-guide)
+- [Fork a Repository](#fork-a-repository)
+- [Credits](#credits)
 
 ---
 ### About
@@ -1096,3 +1100,103 @@ For websites accessibility has been used.
 [Go up](#table-of-contents)
 
 ---
+
+### Bugs
+
+- When deleting a booking if you double click then server error will happen.
+
+<details><summary>Bog</summary>
+<img src="docs/bugs/delete-booking.jpg">
+<img src="docs/bugs/server-error.jpg">
+</details>
+
+
+[Go up](#table-of-contents)
+
+---
+
+### Heroku Deployment Guide
+
+This guide outlines the steps to deploy an application from GitHub to Heroku.
+
+1.  Create a Heroku Account
+
+2.  Create a Heroku App
+- Name your app (e.g., my-heroku-app) and select a region.
+
+3.  Make an env.py and add it in the .gitignore and set Secret Key and database url and cloud storage url
+
+4. In Heroku, app setting , Config Vars make all the varidables you alredy have in the local env.py and set the same value as they are in env.py
+
+5.  Install all the packages listed in the requirements.txt
+
+6. Create a Procfileand add "web: gunicorn myapp.wsgi" to a file named "Procfile".
+
+7.  Update settings.py
+
+- Configure the database connection using DATABASE_URL.
+- Ensure DEBUG is set to False.
+- Add localhost and my-heroku-app.herokuapp.com to ALLOWED_HOSTS.
+
+8.  Run Migrations
+
+- Check migration status: python3 manage.py showmigrations.
+- Apply migrations: python3 manage.py migrate.
+- Create a superuser: python3 manage.py createsuperuser.
+- Load initial data: python3 manage.py loaddata - categories.json and python3 manage.py loaddata products.json.
+
+9.  Install Gunicorn
+
+- Install gunicorn and update requirements.txt: pip3 freeze > requirements.txt.
+
+10. Disable Collectstatic
+
+- Run heroku config:set DISABLE_COLLECTSTATIC=1 -a my-heroku-app.
+
+11. Set Environment Variables
+
+- Ensure all necessary environment variables are configured in Heroku.
+
+12. Connect to GitHub
+- Link your Heroku app to your GitHub repository.
+- Enable automatic deploys from the main branch if desired.
+
+13. Deploy the Application
+
+- Click "Deploy" to launch your app.
+- Access the application via the provided link.
+
+##### Troubleshooting
+- If issues arise, check the build logs in Heroku for troubleshooting information.
+
+[Go up](#table-of-contents)
+
+---
+
+
+### Fork a Repository
+To fork a repository, follow these steps:
+
+1.  Navigate to the Repository
+
+- Go to the GitHub repository you want to fork.
+
+2.  Fork the Repository
+
+- Click on the "Fork" button located in the upper right-hand corner of the repository page.
+
+[Go up](#table-of-contents)
+
+---
+
+
+### Credits
+- Images
+Images were sourced from Pexels.com.
+An AI image generator [Leonardo](https://leonardo.ai/) by Leonardo Interactive Pty Ltd was used for the logo, with permission.
+- Code
+1.  Bootstrap dark navigation theme and classes were utilized.
+Bootstrap carousel was implemented.
+
+2.  The Code Institute walkthrough project
+3.  Inspired by [CI_PP4_the_diplomat](https://github.com/ArronBeale/CI_PP4_the_diplomat)
