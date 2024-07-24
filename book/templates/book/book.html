@@ -67,15 +67,14 @@
                                     <div class="text-end my-5">
                                         <button class="btn btn-outline-light col-5" type="submit">Book</button>
                                     </div>
-                                    {% else %}
-                                    
+                                </form>
+                                {% else %}
                                     <div class="card p-4 m-2">
                                         <p class="h6 m-0 text-center">Log in first to be able to book a table</p>
                                         <div class="text-center my-5">
                                             <a href="{% url "account_login" %}" class="btn btn-outline-light col-5">Log in</a>
                                         </div>
                                     </div>
-                                </form>
                                 {% endif %}
                             </div>
                         </div>
