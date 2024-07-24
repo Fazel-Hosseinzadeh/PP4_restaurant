@@ -12,6 +12,10 @@
 - [Target Audience](#target-audience)
 - [User Stories](#user-stories)
 - [Design](#design)
+- [Frontend Technologies](#frontend-technologies)
+- [Backend Technologies](#backend-technologies)
+- [Development and Testing Tools](#development-and-testing-tools)
+- [Features](#features)
 
 ---
 ### About
@@ -245,3 +249,139 @@ This model has following fields:
 [Go up](#table-of-contents)
 
 ---
+
+### Frontend Technologies
+
+#### Languages
+- HTML: Provides the core structure and content of the webpages.
+- JavaScript: Enhances interactivity and user experience with dynamic elements.
+
+####  Libraries & Tools:
+- Bootstrap v5.2: A popular CSS framework for rapid and responsive web development.
+- Font Awesome: Extensive collection of icons for visual appeal.
+- Chrome DevTools: Essential browser debugging tools for inspecting and optimizing the frontend.
+- Favicon.io: Simplifies the creation and deployment of website favicons.
+
+[Go up](#table-of-contents)
+
+---
+
+### Backend Technologies
+####  Languages & Frameworks:
+- Python: A versatile programming language powering the backend logic.
+- Django: A high-level Python web framework facilitating rapid development.
+##### Libraries & Tools:
+- Postgres: A widely-used relational database management system for data persistence.
+- Cloudinary: Cloud-based platform for managing images and other media assets.
+- Summernote: A WYSIWYG editor for creating and editing blog content within the admin panel.
+
+[Go up](#table-of-contents)
+
+---
+
+### Development and Testing Tools
+####  Version Control:
+- Git: A distributed version control system for managing code changes and collaboration.
+- GitHub: A popular hosting platform for Git repositories and code collaboration.
+####  Validation:
+- WC3 Validators (HTML & CSS): Tools for ensuring code adheres to web standards.
+- JShint & Pycodestyle (PEP8): Static code analysis tools for identifying potential errors in JavaScript and Python code.
+- Lighthouse: Google's tool for auditing web performance, accessibility, and best practices.
+- Wave Validator: Tool for evaluating web content accessibility for users with disabilities.
+
+[Go up](#table-of-contents)
+
+---
+
+###  Features
+
+####  Core Functionalities
+- Layout: Consistent layout across pages with a top navigation bar and a responsive hamburger menu for smaller screens.
+- Logo: Custom logo displayed prominently on all pages.
+- User Authentication: Secure login, registration, and logout functionalities.
+<details><summary>Navigation Bar</summary>
+
+Navigation bar
+![NavBar](docs/features/navbar1.jpg)
+
+Hamburger Button
+![NavBar](docs/features/navbar2.jpg)
+</details>
+
+<details><summary>Logo</summary>
+
+![Logo](docs/features/logo.jpg)
+</details>
+
+<details><summary>User Authentication</summary>
+
+Login
+![Login](docs/features/login.jpg)
+Logout
+![Logout](docs/features/logout.jpg)
+Register
+![Register](docs/features/register.jpg)
+</details>
+
+- Footer: Includes social media links and copyright information.
+<details><summary>Footer</summary>
+
+![Footer](docs/features/footer.jpg)
+
+</details>
+
+
+####  Booking System
+- Table Reservations: Users can book tables with specified guest count, date, and time.
+- Booking Management: Users can view, edit, and cancel their bookings.
+- Booking Status: Users can be informed from My Bookings section about the status of their bookings.
+<details><summary>Booking</summary>
+
+Table Reservations
+![Booking](docs/features/bookingform.jpg)
+
+My Bookings
+![Booking](docs/features/mybookings.jpg)
+</details>
+
+####  Content Management
+- Blog: Features blog posts with pagination, Post detailed views, and commenting functionality.
+- Comment Moderation: Admin approval process for comments to ensure quality control.
+
+<details><summary>Blog</summary>
+
+Post Lists
+![Post](docs/features/postlist.jpg)
+
+Post Detail
+![Post](docs/features/postdetail.jpg)
+
+Post Comment
+![Post](docs/features/postcomment.jpg)
+</details>
+
+
+####  Contact
+- Contact Form: Allows users to send messages to the business.
+- Contact Information: Provide other contact ways
+
+<details><summary>Contact Us</summary>
+
+Contact Content
+![Contact](docs/features/contactcontent.jpg)
+
+Contact Form
+![Contact](docs/features/contactform.jpg)
+
+</details>
+
+####  Additional Features
+- Pagination: Implemented for blog posts to enhance user experience.
+- Responsive Design: Ensures optimal viewing on various devices.
+- Social Media Integration: Includes links to social media platforms for increased visibility.
+
+####  Visual Elements
+- Image Integration: Utilizes images for branding, blog posts, and other visual enhancements.
+- Design Consistency: Maintains a cohesive visual style throughout the website.
+
+
