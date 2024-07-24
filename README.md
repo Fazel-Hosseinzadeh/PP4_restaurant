@@ -631,10 +631,6 @@ For websites accessibility has been used.
 <img src="docs/wave/book.jpg">
 </details>
 
-<details><summary>Book Edit</summary>
-<img src="docs/wave/book_edit.jpg">
-</details>
-
 <details><summary>Contact Us</summary>
 <img src="docs/wave/contact.jpg">
 </details>
